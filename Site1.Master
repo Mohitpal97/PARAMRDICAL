@@ -1,0 +1,351 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PARAMEDICAL.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emerging India Paramedical & Nursing Council
+    </title>
+
+    <base />
+    <link href="site/writereaddata/config/pagescssstyles/en-home-template.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        @import url("css/bootstrap.min.css");
+        @import url("css/font-awesome.min.css");
+        @import url("css/owl.carousel.css");
+        @import url("css/jquery.smartmenus.bootstrap.css");
+        @import url("engine1/style.css");
+        <!-- @import url("css/nanoscroller.css"); -->
+    </style>
+
+    <!-- Include all below Javascript library for Dynamic Work and should not be removed from here. -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&amp;display=swap" rel="stylesheet" />
+    <style type="text/css">
+        @import url("Scripts/jquery-ui-1.9.1.css");
+        @import url("site/writereaddata/config/sitecss.css");
+        @import url("css/responsive.css");
+    </style>
+
+    <!-- Designer Should paste all required css here only. -->
+    <link href="en_Themes/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <header>
+        <section class="top-nav" style="background: #67c9e0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 hidden-sm hidden-xs">
+                        <div class="time" style="color: white">
+                            <i class="fa fa-clock-o"></i>
+                            <noscript>Javascript Required </noscript>
+                            <script type="text/javascript">// <![CDATA[
+                                var d = new Date()
+                                var weekday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+                                var monthname = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+                                document.write(weekday[d.getDay()] + ", ")
+                                document.write(d.getDate() + " ")
+                                document.write(monthname[d.getMonth()] + ", ")
+                                document.write(d.getFullYear())
+                                        // ]]>
+                            </script>
+                            <span id="clockDisplay">
+                                <script type="text/javascript">// <![CDATA[
+                                    function renderTime()                                // ]]>
+                                </script>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- BEGIN SOCIAL ICONS -->
+                    <div class="right">
+
+                        <ul class="social-icons" id="SocialIcon">
+                            <li><a class="rss" data-original-title="rss" runat="server" id="SIrss" href="#"></a></li>
+                            <li><a class="facebook" data-original-title="facebook" runat="server" id="SIfb" href="#"></a></li>
+                            <li><a class="twitter" data-original-title="twitter" runat="server" id="SItwitter" href="#"></a></li>
+                            <li><a class="googleplus" data-original-title="googleplus" runat="server" id="SIgoogleplus" href="#"></a></li>
+                            <li><a class="linkedin" data-original-title="linkedin" runat="server" id="SIlinkedin" href="#"></a></li>
+                            <li><a class="skype" data-original-title="skype" runat="server" id="SIskype" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <!-- END SOCIAL ICONS -->
+                </div>
+            </div>
+        </section>
+        <section class="logo-section">
+            <div class="container " style="color: Teal">
+                <div class="row">
+                    <%-- <div class="col-md-5 col-sm-5 col-xs-12">
+                    --%>
+                    <div class="col-md-2">
+
+                        <div class="logo">
+                            <a href="#">
+
+                                <img style="height: 180px; width: 170px" src="images/wa1.jpg" />
+                                <%--        <img style="height:200px; width:182px" src="images/wa.jpg" />--%>
+                                <%--<img style="height:234px; width:212px" src="images/875c12e6-d847-473e-bb13-8ed35da50c76.jpg" />--%>
+                                <%-- <img src="images/ipclogo.jpg" runat="server" id="Imglogo" class="img-responsive" />
+                                --%>
+                               
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        &nbsp;                  
+                        <div class="logo">
+                            <p style="font-size: 30px; font-family: 'Arial Rounded MT'; color: crimson; background-color: transparent; border: 0px; width: 412px">
+EMERGING INDIA<br />
+PARAMEDICAL &<br />
+NURSING COUNCIL</p>
+                        </div>
+                    </div>
+                       <div class="col-md-2"> 
+                    </div>
+                       <div class="col-md-2 col-sm-2 col-xs-12 hidden-xs hidden-sm opentime" runat="server" style="                                    width: 30%">
+                    
+                    
+                        <img src="images/images.png" style="height: 100px; width: 25%" height="100px" width="25%" class="img-responsive" />
+                        <p style="color: Teal" runat="server" id="txtOpenDays">Monday - Saturday (9 AM To 7 PM)</p>
+                        <span runat="server" id="txtCloseDays">Sunday CLOSED</span>
+                        <br />
+                        <span style="color: Teal" runat="server" id="txtPhoneNo">9761370001</span>
+
+                        <span style="color: Teal" runat="server" id="txtEmailId">Emergingindiacouncil@gmail.com</span>
+
+                        <marquee>   <a href="Online_Admission.aspx" target="_blank"  runat="server" id="txtClickAdmission"> <h3> Click for Online admission</h3></a> </marquee>
+
+                    </div>
+                <%--     <div class="col-md-1 col-sm-2 col-xs-12 hidden-xs">
+                    <a href="image/paymentqr.jpeg" runat="server" id="Imgpayment" target="_blank">
+                            <img src="image/paymentqr.jpeg" alt="Image Not Found" width="165px" height="150px" style="margin-left: -20px" />
+                        </a>
+
+                    </div>--%>
+                <%--  <div class="col-md-2 col-sm-2 col-xs-12 hidden-xs hidden-sm opentime" style="width: 15%">
+
+                        <span style="color: Teal;" class="pull-right">--%>
+                <%--<button class="btn btn-blue" style="color: white; background-color: #67c9e0" onclick="window.open('/Admin/Login.aspx')">Login</button>--%>
+                <%--   <asp:Button runat="server"  id="btnLogin" class="btn btn-blue" style="color: white; background-color: #67c9e0" onclick="window.open('/Admin/Login.aspx')" Text="Login" />
+                             </span> --%>
+                <%-- </div>--%>
+            </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="main-menu">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="" style="width: 100px; text-align: center"><a class="" runat="server" id="txtMenuHome" href="Default.aspx">Home        </a></li>
+                            <li class="dropdown" style="width: 150px; text-align: center"><a class="dropdown-toggle" runat="server" id="txtmenuIntroduction" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="JavaScript:void(0);">Introduction</a>
+                                <ul class="dropdown-menu">
+                                    <li class=""><a class="" runat="server" id="ddlMenuAboutUs" href="ABOUT_US.aspx">About us</a></li>
+                                    <li class=""><a class="" runat="server" id="ddlMenuMessage" href="message.aspx">Message</a></li>
+                                    <li class=""><a class="" runat="server" id="ddlMenuGoverningBody" href="GOVERNING_BODY.aspx">Governing Body</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown" style="width: 130px; text-align: center"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" runat="server" id="txtMenuStudent" href="#">Student     </a>
+                                <ul class="dropdown-menu">
+                                    <li class=""><a class="" runat="server" id="ddlMenuAdmission" href="Online_Admission.aspx">Admission</a></li>
+                                    <li class=""><a class="" runat="server" id="ddlMenuAdmitCard" href="ADMIT_CARD.aspx">Admit Card</a></li>
+                                    <li class=""><a class="" runat="server" id="ddlMenuResult" href="RESULT.aspx">Result</a></li>
+                                    <li class=""><a class="" runat="server" id="ddlMenuRegistrationVarification" href="Reg_Verification_Print1.aspx">Registration Varification</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="" style="width: 80px; text-align: center"><a class="" href="courses.aspx" runat="server" id="lblCourse">COURSE</a></li>
+                            <%--                 <li class="dropdown" style="width: 100px; text-align: center"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" runat="server" id="txtMenuCourse" href="JavaScript:void(0);">Course     </a>--%>
+
+                            <%-- <ul class="dropdown-menu">
+                                    <li><a href='courses.aspx?cdu=cd0001' runat="server" id="ddlMenu3Month" >3 month</a></li>
+                                    <li><a href='courses.aspx?cdu=cd0002' runat="server" id="ddlMenu6Month">Six Month</a></li>
+                                    <li><a href='courses.aspx?cdu=cd0003' runat="server" id="ddlMenu1year">One Year</a></li>
+                                    <li><a href='courses.aspx?cdu=cd0004' runat="server" id="ddlMenu2year">Two Year</a></li>
+                                    <li><a href='courses.aspx?cdu=cd0005' runat="server" id="ddlMenu3year">Three Year</a></li>
+                                    <li><a href='courses.aspx?cdu=cd0006' runat="server" id="ddlMenu4year">Four Year</a></li>
+                                </ul>--%>
+                            </li>
+
+                            <li class="dropdown" style="width: 140px; text-align: center"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="JavaScript:void(0);" runat="server" id="txtMenuRegistration">Registration     </a>
+
+                                <ul class="dropdown-menu sm-nowrap">
+                                    <li class=""><a class="" href="cr_reg_form.aspx" runat="server" id="ddlMenuRegistration">Registration</a></li>
+                                    <li class=""><a class="" href="Reg_Verification_Inst_Print1.aspx" runat="server" id="ddlMenuCertificate">Certificate Varification</a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <%--  <li class="" style="width: 80px; text-align: center"><a class="" href="#" runat="server" id="txtMenuFees">FEES</a></li>
+                            --%>
+                            <li class="" style="width: 100px; text-align: center"><a class="" href="ApplyFor.aspx" runat="server" id="txtMenuEnquiry">Enquiry</a></li>
+                            <li style="width: 120px; text-align: center"><a class="dropdown-toggle has-submenu" href="JavaScript:void(0);" runat="server" id="txtMenuCollegeZone">College Zone     </a>
+                                <ul class="dropdown-menu sm-nowrap">
+                                    <li class=""><a class="" href="Online_Affiliation_Form1.aspx" runat="server" id="ddlMenuApplicationForAffilation">Application for Affiliation</a></li>
+                                    <li class=""><a class="" href="Affiliated_Institute.aspx" runat="server" id="ddlMenuAffilationInstitution">Affiliated Institutions</a></li>
+                                    <li class=""><a class="" href="Online_Affiliation_Print1.aspx" runat="server" id="ddlMenuAffilationPrint">Online Affiliation Print</a></li>
+                                    <li class=""><a class="" href="FAQ.aspx">FAQ’s</a></li>
+                                </ul>
+                            </li>
+                            <li class="" style="width: 100px; text-align: center"><a class="" href="GALLERY.aspx" runat="server" id="txtmenuGallery">Gallery</a></li>
+                            <li class="" style="width: 120px; text-align: center"><a class="" href="CONTACT_US.aspx" runat="server" id="txtmenuContactUs">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        <section class="quicklink-bg">
+            <div class="container">
+
+                <div class="col-sm-12">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="fa fa-file-text-o red"></span><a href="Reg_Verification_Print1.aspx" class="maroon-new" runat="server" id="QLinkRegistrationVerification">Registration Verification</a></div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="fa attendance"></span><a href="Reg_Verification_Inst_Print1.aspx" class="green-shade-new" runat="server" id="QLinkCertificationVerification">Certification Verification </a></div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox">
+                            <span class="fa fa-file-text-o red"></span><a href="ADMIT_CARD.aspx" class="red-new" runat="server" id="QLinkDownloadAdmitCard">Download Admit Card<br />
+                                (Student Copy) </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="fa attendance"></span><a style="font-size: 14px;" href="Online_Admission.aspx" class="attendance-new" runat="server" id="QLinkOnlineAdmission">Online Admission</a></div>
+                    </div>
+                    <!--<div class="col-sm-3 col-xs-12">
+            <div class="linkbox"><span class="fa attendance"> </span> <a href="#"    class="attendance-new">Attendance Login Panel</a></div></div>-->
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="icon-login icons green"></span><a href="admin/login.aspx" class="green-new" runat="server" id="QLinkLoginPanel">Center Login Panel</a></div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="fa fa-graduation-cap DarkGolden"></span><a href="RESULT.aspx" class="DarkGolden-new" runat="server" id="QLinkResults">Results</a></div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="fa fa-file-text-o red"></span><a href="ABOUT_US.aspx" class="yellow-dark" runat="server" id="QLinkAboutUS">About US</a></div>
+                    </div>
+                    <!--<div class="col-sm-3 col-xs-12">
+            <div class="linkbox"><span class="icon-registration-open icons yellow-new1"> </span> <a href="article/en/registration" class="yellow-dark">Registration</a></div>    </div>-->
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="linkbox"><span class="icon-badge icons cyan"></span><a href="Affiliated_Institute.aspx" class="cyan-new" runat="server" id="QLinkRecognizedInstitutes">Recognized Institutes</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </asp:ContentPlaceHolder>
+
+
+
+    <footer class="extrnl" runat="server" id="txtFooter">
+        <div class="section footlink">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <ul id="footer-menu-bottom" class="footer-menu">
+                            <li class=""><a class="" href="#" runat="server" id="txtFooterTermsConditions">Terms & Conditions</a></li>
+                            <li class=""><a class="" href="#" runat="server" id="txtFooterCopyrightPolicy">Copyright Policy</a></li>
+                            <li class=""><a class="" href="#" runat="server" id="txtFooterPrivacyPolicy">Privacy Policy</a></li>
+                            <li class=""><a class="" href="#" runat="server" id="txtFooterHyperlinkingPolicy">Hyperlinking Policy</a></li>
+                            <li class=""><a class="" href="#" runat="server" id="txtFooterHelp">Help</a></li>
+
+                        </ul>
+                    </div>
+                    <%--   <div class="col-md-8 col-sm-12">
+                        <ul id="footer-menu-bottom" class="footer-menu">
+                            <li class=""><a class="" href="TERM_CONDITION.aspx"  runat="server" id="txtFooterTermsConditions">Terms & Conditions</a></li>
+                            <li class=""><a class="" href="COPYRIGHT_POLOCY.aspx" runat="server" id="txtFooterCopyrightPolicy">Copyright Policy</a></li>
+                            <li class=""><a class="" href="PRIVACY_POLICY.aspx" runat="server" id="txtFooterPrivacyPolicy">Privacy Policy</a></li>
+                            <li class=""><a class="" href="HYPERLINKING_POLICY.aspx" runat="server" id="txtFooterHyperlinkingPolicy">Hyperlinking Policy</a></li>
+                            <li class=""><a class="" href="HELP.aspx" runat="server" id="txtFooterHelp">Help</a></li>
+
+                        </ul>
+                    </div>--%>
+                    <div class="col-md-4 col-sm-12 text-right"><strong>Last Updated on :</strong><span runat="server" id="txtFooterLastupdate"> Wednesday, Feb 19 2020  10:15PM</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="section footbottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <p runat="server" id="txtFooterPara1">This is the official Website of Indian Paramedical Council, India.</p>
+                        <p runat="server" id="txtFooterPara2">Content on this website is published and Managed by Indian Paramedical Council.</p>
+                        <p runat="server" id="txtFooterPara3">For any query regarding this website, Please contact the <a href="#">"Web Information Manager"</a>.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-right">
+                        <div class="visit">
+                            <div class="visitttest">
+                                <h2>Visitor No. :<span runat="server" id="txtVisitorNo">179976</span></h2>
+                            </div>
+                            <!-- Histats.com  (div with counter) -->
+                            <div id="histats_counter"></div>
+                        </div>
+                        <!-- Histats.com  START  (aync)-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+<script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery-ui.min-1.9.1.js"></script>
+<script src="site/writereaddata/config/sitejs.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<!--For Cookies-->
+<script src="js/news-scroller.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.smartmenus.js"></script>
+<script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".demo1").bootstrapNews({
+            newsPerPage: 5,
+            autoplay: true,
+            pauseOnHover: true,
+            direction: 'up',
+            newsTickerInterval: 4000,
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="js/font-resize.js"></script>
+<script type="text/javascript" src="en_Themes/myscript.js"></script>
+<div>
+    <link href="assetsnew/global/css/components.css" rel="stylesheet" />
+    <link href="assetsnew/frontend/layout/css/style.css" rel="stylesheet" />
+    <link href="assetsnew/frontend/pages/css/style-layer-slider.css" rel="stylesheet" />
+    <link href="assetsnew/frontend/layout/css/style-responsive.css" rel="stylesheet" />
+    <link href="assetsnew/frontend/layout/css/themes/red.css" rel="stylesheet" />
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+
+
+</html>
